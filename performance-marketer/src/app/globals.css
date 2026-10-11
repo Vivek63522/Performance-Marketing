@@ -1,0 +1,175 @@
+@import "tailwindcss";
+@import "./flaticon.css";
+@import "@flaticon/flaticon-uicons/css/all/all.css";
+@theme inline {
+  --brand-heading-font: "Barlow", sans-serif;
+  --color-brand-base: #ffaa17;
+  --color-brand-secondary: #232429;
+  --color-brand-text-dark: #222429;
+  --color-brand-text: #686a6f;
+  --color-brand-text-gray: #999b9f;
+  --color-brand-gray: #f4f5f8;
+  --color-brand-white: #ffffff;
+  --color-brand-border: #e6e7eb;
+  --color-border: #dbdbdb;
+
+  --font-sans: var(--font-geist-sans), "Arial", "Helvetica Neue", sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, monospace;
+}
+
+body {
+  background-color: var(--color-brand-white);
+  color: var(--color-brand-text, "Barlow", sans-serif);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-brand-text-dark);
+  font-family: var(--brand-heading-font, "Barlow", sans-serif);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a {
+  color: var(--color-brand-base);
+  transition: all 400ms ease;
+}
+a,
+a:hover,
+a:focus,
+a:visited {
+  text-decoration: none;
+}
+
+::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+
+/* header btn  */
+.action-btn {
+  background: var(--color-brand-gray, #f4f5f8);
+  color: var(--color-brand-text-dark, #222429);
+  padding: 15px 30px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 128.571%;
+  letter-spacing: normal;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.action-btn:hover {
+  color: var(--color-brand-white, #fff) !important;
+}
+.action-btn::after {
+  content: "";
+  background-color: var(--color-brand-secondary, #232429);
+  width: 0;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: 0;
+}
+.action-btn::before {
+  content: "";
+  background-color: var(--color-brand-secondary, #232429);
+  width: 0;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: 0;
+}
+.action-btn:hover::before,
+.action-btn:hover::after {
+  width: 100%;
+}
+
+.action-btn-two {
+  background: var(--color-brand-base, #ffaa17);
+  color: var(--color-brand-white, #fff);
+  padding: 15px 30px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 128.571%;
+  letter-spacing: normal;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.action-btn-two:hover {
+  color: var(--color-brand-text-dark, #222429) !important;
+}
+.action-btn-two::after {
+  content: "";
+  background-color: var(--color-brand-secondary, #232429);
+  width: 0;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: 0;
+}
+.action-btn-two::before {
+  content: "";
+  background-color: var(--color-brand-secondary, #232429);
+  width: 0;
+  height: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  z-index: 0;
+}
+.action-btn-two:hover::before,
+.action-btn-two:hover::after {
+  width: 100%;
+}
+
+/* animation left to right  */
+@keyframes left-to-right {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    /* transform: translateX(0px); */
+  }
+}
+.left-to-right {
+  animation: left-to-right 4s ease-in-out infinite;
+}
+@keyframes top-to-bottom {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    /* transform: translateY(0px); */
+  }
+}
+.top-to-bottom {
+  animation: top-to-bottom 3s ease-in-out infinite;
+}
