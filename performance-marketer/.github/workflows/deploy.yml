@@ -3,7 +3,7 @@ name: Deploy Next.js to cPanel
 on:
   push:
     branches:
-      - main  # Agar aapki branch ka naam 'master' hai toh yahan master likhein
+      - main
 
 jobs:
   build-and-deploy:
@@ -18,14 +18,18 @@ jobs:
         with:
           node-version: 22
           cache: 'npm'
+          cache-dependency-path: performance-marketer/package-lock.json
 
       - name: Install Dependencies
+        working-directory: ./performance-marketer
         run: npm ci
 
       - name: Build Next.js Production
+        working-directory: ./performance-marketer
         run: npm run build
 
       - name: Prepare Passenger Restart
+        working-directory: ./performance-marketer
         run: |
           mkdir -p tmp
           touch tmp/restart.txt
@@ -36,9 +40,20 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /
-          local-dir: .next/
-          # Server ke .next folder me sync karega
+          port: 21
+          server-dir: /.next/
+          local-dir: ./performance-marketer/.next/
+          dry-run: false
+
+      - name: Sync public assets to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          server-dir: /public/
+          local-dir: ./performance-marketer/public/
           dry-run: false
 
       - name: Trigger Passenger Restart
@@ -47,5 +62,6 @@ jobs:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
           server-dir: /tmp/
-          local-dir: ./tmp/
+          local-dir: ./performance-marketer/tmp/

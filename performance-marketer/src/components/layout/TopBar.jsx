@@ -17,7 +17,7 @@ export default function TopBar() {
         <div className="flex items-center m-0 gap-12.5">
           <div className="flex items-center text-brand-text-gray text-[14px] font-semibold leading-[1.2857]">
             <FaMapMarkerAlt size={12} className="text-brand-base mr-2.25" />
-            <span>Surat</span>
+            <span>Greater Noida, India</span>
           </div>
           <div className="flex items-center text-brand-text-gray text-[14px] font-semibold leading-[1.2857]">
             <FaEnvelope size={12} className="text-brand-base mr-[9px]" />
