@@ -6,6 +6,7 @@ import { GoSearch } from "react-icons/go";
 import Container from "../ui/Container";
 import { ChevronDown, PhoneRing, Menu, X } from "reicon-react";
 import MobileNav from "./MobileNav";
+import Logo from "../ui/Logo";
 
 export default function PageHeader({
   title,
@@ -122,11 +123,7 @@ export default function PageHeader({
           <Container>
             <div className="flex items-center justify-between relative w-full py-3.5 sm:py-4 lg:py-0">
               {/* Logo */}
-              <Link href="/" className="shrink-0 flex items-center">
-                <span className="text-2xl sm:text-3xl lg:text-5xl text-white font-extrabold uppercase tracking-wider">
-                  Logo
-                </span>
-              </Link>
+              <Logo variant="light" iconClassName="h-9 sm:h-11 lg:h-12 w-auto" />
 
               {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center mx-auto">
@@ -246,11 +243,7 @@ export default function PageHeader({
           <Container>
             <div className="flex items-center justify-between py-3">
               {/* Logo */}
-              <Link href="/" className="shrink-0 flex items-center">
-                <span className="text-2xl sm:text-3xl font-extrabold text-white uppercase  tracking-wider">
-                  Logo
-                </span>
-              </Link>
+              <Logo variant="light" iconClassName="h-9 sm:h-10 lg:h-11 w-auto" />
 
               {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center mx-auto">

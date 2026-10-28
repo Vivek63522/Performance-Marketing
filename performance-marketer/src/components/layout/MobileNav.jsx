@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import { useState, useEffect } from "react";
 import { ChevronDown } from "lucide-react";
+import Logo from "@/components/ui/Logo";
 
 export default function MobileNav({ isOpen, onClose, navLinks }) {
   const [expandedMenus, setExpandedMenus] = useState({});
@@ -61,15 +62,8 @@ export default function MobileNav({ isOpen, onClose, navLinks }) {
         </button>
 
         {/* Logo */}
-        <div className="mb-[40px] flex">
-          <Link href="/" onClick={onClose}>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-white tracking-tight">
-                BRAND
-              </span>
-              <div className="w-2 h-2 rounded-full bg-brand-base mb-2"></div>
-            </div>
-          </Link>
+        <div className="mb-[36px] flex">
+          <Logo variant="light" onClick={onClose} iconClassName="h-10 w-auto" />
         </div>
 
         {/* Navigation Links */}

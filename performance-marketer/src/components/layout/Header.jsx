@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Search, ShoppingCart, Menu, X, ChevronDown } from "lucide-react";
 
 import MobileNav from "./MobileNav";
+import Logo from "@/components/ui/Logo";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -82,11 +83,7 @@ export default function Header() {
         <div className="flex items-start lg:items-center justify-between relative">
           {/* Logo Section */}
           <div className="relative z-[1] bg-transparent lg:bg-brand-base py-[20px] lg:pt-[30px] lg:pb-[6px] px-[16px] lg:px-4 flex items-center justify-between w-full lg:w-auto before:content-[''] before:w-[999999px] before:top-0 before:bg-brand-base before:absolute before:right-[99%] before:-z-10 before:bottom-[-24px] after:hidden lg:after:block after:content-[''] after:bg-brand-base after:absolute after:top-0 after:left-0 after:right-[-108px] after:bottom-[-24px] after:-z-10 max-lg:before:hidden">
-            <Link href="/" className="shrink-0 flex items-center">
-              <span className="text-5xl text-brand-text-dark font-bold uppercase">
-                Logo
-              </span>
-            </Link>
+            <Logo variant="header" iconClassName="h-10 sm:h-11 lg:h-12 w-auto" />
 
             {/* Mobile menu button (inside logo bar on mobile) */}
             <div className="flex lg:hidden items-center gap-4">

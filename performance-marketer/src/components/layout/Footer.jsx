@@ -13,6 +13,7 @@ import {
   FaArrowRight,
 } from "react-icons/fa6";
 import Container from "../ui/Container";
+import Logo from "../ui/Logo";
 
 const galleryImages = [
   "/assets/instagram/1.jpg",
@@ -50,19 +51,8 @@ export default function Footer() {
         {/* Top Bar: Brand Logo + Line Separator + Social Circles */}
         <div className="bg-black relative z-10">
           <div className="max-w-[1600px] mx-auto p-10 flex flex-col md:flex-row items-center justify-between gap-6">
-            {/* Logo with Orange Connected Badge */}
-            <Link href="/" className="flex items-center gap-3 shrink-0">
-              <div className="w-10 h-10 rounded-lg bg-brand-base flex items-center justify-center shadow-md">
-                <img
-                  src="/assets/shapes/sec-title-s-1.png"
-                  alt="Brand Mark"
-                  className="w-6 h-6 object-contain"
-                />
-              </div>
-              <span className="text-[26px] font-extrabold tracking-tight text-white uppercase font-heading">
-                Brand
-              </span>
-            </Link>
+            {/* Logo */}
+            <Logo variant="light" iconClassName="h-11 sm:h-12 w-auto" />
 
             {/* Dividing Horizontal Line across middle */}
             <div className="hidden md:block flex-1 h-[1px] bg-white/10 mx-8 lg:mx-12" />
