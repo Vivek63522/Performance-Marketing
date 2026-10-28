@@ -7,14 +7,26 @@ import PageLoader from "@/components/ui/PageLoader";
 import "./globals.css";
 
 export const metadata = {
-  title: "Performance Marketer",
-  description: "Performance Marketer",
+  title: "Manish Verma Consulting | Performance Marketing & Growth",
+  description:
+    "Performance Marketing & Growth Consulting engineered to scale ambitious businesses profitably.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", sizes: "192x192", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.png" type="image/png" sizes="192x192" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <link
           href="https://api.fontshare.com/v2/css?f[]=general-sans@200,201,300,301,400,401,500,501,600,601,700,701,1,2&f[]=khand@300,400,500,600,700,1&display=swap"
           rel="stylesheet"

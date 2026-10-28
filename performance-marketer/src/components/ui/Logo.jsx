@@ -6,6 +6,8 @@ export default function Logo({
   variant = "header",
   iconClassName = "h-10 sm:h-11 md:h-12 w-auto",
   className = "",
+  titleClassName = "",
+  subtitleClassName = "",
   onClick,
 }) {
   const isLightText = variant === "light";
@@ -28,15 +30,25 @@ export default function Logo({
       <div className="flex flex-col justify-center leading-none">
         <span
           className={`font-heading font-extrabold uppercase tracking-tight text-[17px] sm:text-[20px] lg:text-[22px] leading-tight ${
-            isLightText ? "text-white" : "text-brand-text-dark"
+            titleClassName
+              ? titleClassName
+              : isLightText
+              ? "text-white"
+              : "text-brand-text-dark"
           }`}
           style={{ letterSpacing: "0.02em" }}
         >
           Manish Verma
         </span>
         <span
-          className={`font-sans font-bold uppercase text-[9px] sm:text-[10px] lg:text-[11px] tracking-[0.25em] sm:tracking-[0.28em] mt-0.5 sm:mt-1 ${
-            isLightText ? "text-[#d4a340]" : "text-brand-base"
+          className={`font-sans font-black uppercase text-[9px] sm:text-[10px] lg:text-[11px] tracking-[0.25em] sm:tracking-[0.28em] mt-0.5 sm:mt-1 ${
+            subtitleClassName
+              ? subtitleClassName
+              : variant === "header"
+              ? "text-white! drop-shadow-sm max-lg:text-brand-text-dark"
+              : isLightText
+              ? "text-[#d4a340]"
+              : "text-brand-text-dark"
           }`}
         >
           Consulting
