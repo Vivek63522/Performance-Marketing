@@ -18,7 +18,7 @@ const services = [
     ),
     rawTitle: "Performance Marketing",
     iconClass: "flaticon-advertising",
-    image: "/assets/services/service-3-1.png",
+    image: "/assets/services/service-pm.png",
     href: "/services/performance-marketing",
   },
   {
@@ -30,7 +30,7 @@ const services = [
     ),
     rawTitle: "Social Media Marketing",
     iconClass: "flaticon-campaign",
-    image: "/assets/services/service-3-3.png",
+    image: "/assets/services/service-smm.png",
     href: "/services/social-media-marketing",
   },
   {
@@ -42,7 +42,7 @@ const services = [
     ),
     rawTitle: "SEO & Online Visibility",
     iconClass: "flaticon-search-engine",
-    image: "/assets/services/service-3-2.png",
+    image: "/assets/services/service-seo.png",
     href: "/services/seo-online-visibility",
   },
   {
@@ -54,7 +54,7 @@ const services = [
     ),
     rawTitle: "Email Marketing",
     iconClass: "flaticon-concept",
-    image: "/assets/services/service-1-6.png",
+    image: "/assets/services/service-email.png",
     href: "/services/email-marketing",
   },
   {
@@ -66,7 +66,7 @@ const services = [
     ),
     rawTitle: "AI Marketing Automation",
     iconClass: "flaticon-brain-1",
-    image: "/assets/services/service-1-4.png",
+    image: "/assets/services/service-ai.png",
     href: "/services/ai-automation",
   },
   {
@@ -78,7 +78,7 @@ const services = [
     ),
     rawTitle: "LinkedIn Personal Branding",
     iconClass: "flaticon-instructor",
-    image: "/assets/services/service-1-5.png",
+    image: "/assets/services/service-linkedin.png",
     href: "/services/linkedin-branding",
   },
 ];
