@@ -1,0 +1,54 @@
+name: Deploy Next.js to cPanel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+          cache-dependency-path: performance-marketer/package-lock.json
+
+      - name: Install Dependencies
+        working-directory: ./performance-marketer
+        run: npm ci
+
+      - name: Build Next.js Production
+        working-directory: ./performance-marketer
+        run: npm run build
+
+      - name: Prepare Passenger Restart
+        working-directory: ./performance-marketer
+        run: |
+          mkdir -p tmp
+          touch tmp/restart.txt
+
+      - name: Sync .next build to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /
+          local-dir: ./performance-marketer/.next/
+          dry-run: false
+
+      - name: Trigger Passenger Restart
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /tmp/
+          local-dir: ./performance-marketer/tmp/

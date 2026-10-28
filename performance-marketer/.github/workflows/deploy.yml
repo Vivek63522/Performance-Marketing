@@ -1,0 +1,51 @@
+name: Deploy Next.js to cPanel
+
+on:
+  push:
+    branches:
+      - main  # Agar aapki branch ka naam 'master' hai toh yahan master likhein
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Build Next.js Production
+        run: npm run build
+
+      - name: Prepare Passenger Restart
+        run: |
+          mkdir -p tmp
+          touch tmp/restart.txt
+
+      - name: Sync .next build to cPanel via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /
+          local-dir: .next/
+          # Server ke .next folder me sync karega
+          dry-run: false
+
+      - name: Trigger Passenger Restart
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /tmp/
+          local-dir: ./tmp/

@@ -1,0 +1,245 @@
+/**
+ * Local Web Fonts Definition
+ * Fonts provided in public/fonts:
+ * - Khand (Headings: h1, h2, h3, h4, h5, h6, titles)
+ * - General Sans (Body, paragraphs <p>, text, buttons, links)
+ */
+
+/* =========================================================
+   KHAND FONT FAMILY (HEADINGS)
+   Weights: 300 (Light), 400 (Regular), 500 (Medium), 600 (SemiBold), 700 (Bold)
+   ========================================================= */
+
+@font-face {
+  font-family: 'Khand';
+  src: url('/fonts/Khand/Fonts/WEB/fonts/Khand-Light.woff2') format('woff2'),
+       url('/fonts/Khand/Fonts/WEB/fonts/Khand-Light.woff') format('woff'),
+       url('/fonts/Khand/Fonts/WEB/fonts/Khand-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Khand';
+  src: url('/fonts/Khand/Fonts/WEB/fonts/Khand-Regular.woff2') format('woff2'),
+       url('/fonts/Khand/Fonts/WEB/fonts/Khand-Regular.woff') format('woff'),
+       url('/fonts/Khand/Fonts/WEB/fonts/Khand-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Khand';
+  src: url('/fonts/Khand/Fonts/WEB/fonts/Khand-Medium.woff2') format('woff2'),
+       url('/fonts/Khand/Fonts/WEB/fonts/Khand-Medium.woff') format('woff'),
+       url('/fonts/Khand/Fonts/WEB/fonts/Khand-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Khand';
+  src: url('/fonts/Khand/Fonts/WEB/fonts/Khand-SemiBold.woff2') format('woff2'),
+       url('/fonts/Khand/Fonts/WEB/fonts/Khand-SemiBold.woff') format('woff'),
+       url('/fonts/Khand/Fonts/WEB/fonts/Khand-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Khand';
+  src: url('/fonts/Khand/Fonts/WEB/fonts/Khand-Bold.woff2') format('woff2'),
+       url('/fonts/Khand/Fonts/WEB/fonts/Khand-Bold.woff') format('woff'),
+       url('/fonts/Khand/Fonts/WEB/fonts/Khand-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* =========================================================
+   GENERAL SANS FONT FAMILY (BODY & TEXT)
+   Weights: 200 (Extralight), 300 (Light), 400 (Regular), 500 (Medium), 600 (SemiBold), 700 (Bold)
+   ========================================================= */
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Extralight.woff2') format('woff2'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Extralight.woff') format('woff'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Extralight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-ExtralightItalic.woff2') format('woff2'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-ExtralightItalic.woff') format('woff'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-ExtralightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Light.woff2') format('woff2'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Light.woff') format('woff'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-LightItalic.woff2') format('woff2'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-LightItalic.woff') format('woff'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Regular.woff2') format('woff2'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Regular.woff') format('woff'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Italic.woff2') format('woff2'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Italic.woff') format('woff'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Medium.woff2') format('woff2'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Medium.woff') format('woff'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-MediumItalic.woff2') format('woff2'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-MediumItalic.woff') format('woff'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Semibold.woff2') format('woff2'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Semibold.woff') format('woff'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-SemiboldItalic.woff2') format('woff2'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-SemiboldItalic.woff') format('woff'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-SemiboldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Bold.woff2') format('woff2'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Bold.woff') format('woff'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'General Sans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-BoldItalic.woff2') format('woff2'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-BoldItalic.woff') format('woff'),
+       url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Also define 'GeneralSans' alias without space */
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+}
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Semibold.woff2') format('woff2');
+  font-weight: 600;
+}
+@font-face {
+  font-family: 'GeneralSans';
+  src: url('/fonts/General%20Sans/Fonts/WEB/fonts/GeneralSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+}
+
+/* Backward-compatibility alias: Map 'Barlow' to 'Khand' so any legacy style renders Khand directly */
+@font-face {
+  font-family: 'Barlow';
+  src: url('/fonts/Khand/Fonts/WEB/fonts/Khand-Bold.woff2') format('woff2'),
+       url('/fonts/Khand/Fonts/WEB/fonts/Khand-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('/fonts/Khand/Fonts/WEB/fonts/Khand-SemiBold.woff2') format('woff2'),
+       url('/fonts/Khand/Fonts/WEB/fonts/Khand-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('/fonts/Khand/Fonts/WEB/fonts/Khand-Medium.woff2') format('woff2'),
+       url('/fonts/Khand/Fonts/WEB/fonts/Khand-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Barlow';
+  src: url('/fonts/Khand/Fonts/WEB/fonts/Khand-Regular.woff2') format('woff2'),
+       url('/fonts/Khand/Fonts/WEB/fonts/Khand-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

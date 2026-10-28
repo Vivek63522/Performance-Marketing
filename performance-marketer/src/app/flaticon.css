@@ -1,21 +1,19 @@
 @font-face {
   font-family: "flaticon_agency";
   src:
-    url("/fonts/flaticon_agency245f.ttf?0d77276390ae7362b4080c2ac87b872a")
-      format("truetype"),
-    url("/fonts/flaticon_agency245f.woff?0d77276390ae7362b4080c2ac87b872a")
-      format("woff"),
-    url("/fonts/flaticon_agency245f.woff2?0d77276390ae7362b4080c2ac87b872a")
-      format("woff2"),
-    url("/fonts/flaticon_agency245f.eot?0d77276390ae7362b4080c2ac87b872a#iefix")
-      format("embedded-opentype"),
-    url("/fonts/flaticon_agency245f.svg?0d77276390ae7362b4080c2ac87b872a#flaticon_agency")
-      format("svg");
+    url("/fonts/flaticon_agency245f.ttf") format("truetype"),
+    url("/fonts/flaticon_agency245f.woff") format("woff"),
+    url("/fonts/flaticon_agency245f.woff2") format("woff2"),
+    url("/fonts/flaticon_agency245f.eot") format("embedded-opentype"),
+    url("/fonts/flaticon_agency245f.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
 i[class^="flaticon-"]:before,
 i[class*=" flaticon-"]:before {
-  font-family: flaticon_agency !important;
+  font-family: "flaticon_agency" !important;
   font-style: normal;
   font-weight: normal !important;
   font-variant: normal;
@@ -138,4 +136,7 @@ i[class*=" flaticon-"]:before {
 }
 .flaticon-design-2:before {
   content: "\f126";
+}
+.flaticon-shield:before {
+  content: "\f92b";
 }
